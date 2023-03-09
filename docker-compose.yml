@@ -16,5 +16,3 @@ services:
       - CHOKIDAR_USEPOLLING=true
 volumes:
   nuxt_node_modules:
-extra_hosts:
-  - "host.docker.internal:8000"
