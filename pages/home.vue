@@ -1,12 +1,14 @@
 <template>
   <div>
-    <div>
-        <h2>ログイン状態:{{ $auth.loggedIn }}</h2>
-        <p>{{ $auth.user }}</p>
-    </div>
-    <div v-if="$auth.loggedIn">
-      <button @click="$auth.logout()">Logout</button>
-    </div>    
+    <v-card>
+      <div>
+          <h2>ログイン状態:{{ $auth.loggedIn }}</h2>
+          <p>{{ $auth.user }}</p>
+      </div>
+      <div v-if="$auth.loggedIn">
+        <button @click="$auth.logout()">Logout</button>
+      </div>         
+    </v-card>
   </div>
 </template>
 
