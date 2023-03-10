@@ -89,7 +89,7 @@ export default {
         return {
             spots: [],
             clipped: false,
-            drawer: false,
+            drawer: true,
             fixed: false,
             miniVariant: false,
             right: true,
