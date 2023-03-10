@@ -55,11 +55,17 @@ export default {
                 data:this.user
             })
             .then(() => {
+                this.onLoadhomeData();
                 this.$router.push("/home");
             });
         },
         async onClickTransitionRegisterButton() {
             this.$router.push("/auth/register");
+        },
+        async onLoadhomeData() {
+            this.$store.dispatch("homeData/onLoadhomeData", {
+                usersId: this.$auth.user.id
+            });
         }
     }
 }

@@ -3,7 +3,7 @@
       <v-card>
         <div>
             <h2>ログイン状態:{{ $auth.loggedIn }}</h2>
-            <p>{{ $auth.user }}</p>
+            <p>{{ $store.state.homeData["homeData"] }}</p>
         </div>
         <div v-if="$auth.loggedIn">
           <button @click="$auth.logout()">Logout</button>
