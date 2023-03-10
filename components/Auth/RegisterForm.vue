@@ -6,7 +6,7 @@
                 <v-form @submit.prevent="registerUser">
                     <v-text-field
                         v-model="user.name"
-                        label="Email"
+                        label="Name"
                     ></v-text-field>
                     <v-text-field
                         v-model="user.email"
