@@ -16,7 +16,7 @@
                         color="success"
                         class="mt-4"
                         block
-                        @click="loginUser()"
+                        @click="onClickLoginButton()"
                     >
                         Login
                     </v-btn>
@@ -37,7 +37,7 @@ export default {
         }
     },
     methods:{
-        loginUser() {
+        onClickLoginButton() {
             this.$auth.loginWith("local", {
                 data:this.user
             })

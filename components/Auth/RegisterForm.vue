@@ -20,7 +20,7 @@
                         color="success"
                         class="mt-4"
                         block
-                        @click="registerUser()"
+                        @click="onClickRegisterButton()"
                     >
                         Join
                     </v-btn>
@@ -42,7 +42,7 @@ export default {
         }
     },
     methods:{
-        registerUser() {
+        onClickRegisterButton() {
             this.$axios.post("/api/register",this.user)
             .then((response) => {
                 this.$auth.loginWith("local", {
