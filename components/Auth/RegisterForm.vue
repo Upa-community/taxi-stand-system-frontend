@@ -14,6 +14,7 @@
                     ></v-text-field>
                     <v-text-field
                         v-model="user.password"
+                        type="password"
                         label="Password"
                     ></v-text-field>
                 </v-form>
