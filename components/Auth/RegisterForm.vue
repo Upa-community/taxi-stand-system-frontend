@@ -16,15 +16,28 @@
                         v-model="user.password"
                         label="Password"
                     ></v-text-field>
-                    <v-btn
-                        color="success"
-                        class="mt-4"
-                        block
-                        @click="onClickRegisterButton()"
-                    >
-                        Join
-                    </v-btn>
                 </v-form>
+                <v-row>
+                    <v-col cols="10">
+                        <v-btn
+                            block
+                            color="success"
+                            @click="onClickRegisterButton()"
+                        >
+                            Join
+                        </v-btn>
+                    </v-col>
+                    <v-col cols="2">
+                        <v-btn
+                            block
+                            outlined
+                            color="success" 
+                            @click="onClickTransitionLoginButton()"
+                        >
+                            Sign in
+                        </v-btn>                          
+                    </v-col>
+                </v-row>
             </v-col>
         </v-card>
     </v-container>
@@ -50,6 +63,9 @@ export default {
                 })
             })
         },
+        onClickTransitionLoginButton() {
+            this.$router.push("/auth/login");
+        }
     }
 }
 </script>
