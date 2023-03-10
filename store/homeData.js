@@ -1,17 +1,17 @@
 import axios from 'axios'
 
 export const state = () => ({
-  homeData: []
+    homeData: []
 })
 
 export const getters = {
-  isStatus: state => state.homeData
+    isStatus: state => state.homeData
 }
 
 export const mutations = {
-  setHomeData(state, data){
-    state.homeData = data;
-  }
+    setHomeData(state, data) {
+        state.homeData = data;
+    }
 }
 
 export const actions = {

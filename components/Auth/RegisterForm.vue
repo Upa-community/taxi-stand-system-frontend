@@ -48,18 +48,18 @@ export default {
     data() {
         return {
             user:{
-            name: "",
-            email: "",
-            password: ""
+                name: "",
+                email: "",
+                password: ""
             }
         }
     },
     methods:{
         async onClickRegisterButton() {
-            this.$axios.post("/api/register",this.user)
+            this.$axios.post("/api/register", this.user)
             .then((response) => {
                 this.$auth.loginWith("local", {
-                data: this.user
+                    data: this.user
                 })
             })
         },
