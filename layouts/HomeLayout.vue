@@ -6,6 +6,7 @@
             :clipped="clipped"
             fixed
             app
+            class="navigation"
         >
             <v-list>
                 <v-list-item
@@ -90,3 +91,9 @@ export default {
     },
 }
 </script>
+
+<style scoped>
+.navigation {
+  background-color: #00E5FF;
+}
+</style>
