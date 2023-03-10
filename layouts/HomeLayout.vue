@@ -35,9 +35,7 @@
             </v-list>
             <v-row>
                 <v-col cols="12">
-                    <div 
-                        align="center"
-                        >
+                    <div align="center">
                         <v-btn
                             height="50"
                             width="180"
