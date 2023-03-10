@@ -1,19 +1,18 @@
 <template>
-        <v-container>
-            <v-card>
-                <v-col cols="12">
-                    <MonthChartData />
-                </v-col>
-            </v-card>            
-        </v-container>
+    <v-card class="mx-auto"> 
+        <v-card-title class="headline">Month chart</v-card-title>
+        <v-card-item>
+            <MonthChartData />        
+        </v-card-item>
+    </v-card>            
 </template>
   
-  <script>
-  import MonthChartData from '~/components/Dashboard/MonthChartData.vue'
+<script>
+import MonthChartData from '~/components/Dashboard/MonthChartData.vue'
   
-  export default {
+export default {
     components: {
         MonthChartData
     }
-  }
-  </script>
+}
+</script>
