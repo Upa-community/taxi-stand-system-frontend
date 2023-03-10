@@ -28,7 +28,7 @@
 
 <script>
 export default {
-    data(){
+    data() {
         return {
             user:{
                 email: "",
@@ -37,8 +37,8 @@ export default {
         }
     },
     methods:{
-        loginUser(){
-            this.$auth.loginWith("local" ,{
+        loginUser() {
+            this.$auth.loginWith("local", {
                 data:this.user
             })
             .then(() => {

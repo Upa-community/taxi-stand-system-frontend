@@ -32,7 +32,7 @@
 
 <script>
 export default {
-    data(){
+    data() {
         return {
             user:{
             name: "",
@@ -42,10 +42,10 @@ export default {
         }
     },
     methods:{
-        registerUser(){
+        registerUser() {
             this.$axios.post("/api/register",this.user)
             .then((response) => {
-                this.$auth.loginWith("local",{
+                this.$auth.loginWith("local", {
                 data: this.user
                 })
             })
