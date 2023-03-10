@@ -50,7 +50,7 @@ export default {
         }
     },
     methods:{
-        onClickLoginButton() {
+        async onClickLoginButton() {
             this.$auth.loginWith("local", {
                 data:this.user
             })
@@ -58,7 +58,7 @@ export default {
                 this.$router.push("/home");
             });
         },
-        onClickTransitionRegisterButton() {
+        async onClickTransitionRegisterButton() {
             this.$router.push("/auth/register");
         }
     }

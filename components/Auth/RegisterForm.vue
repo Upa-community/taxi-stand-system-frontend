@@ -55,7 +55,7 @@ export default {
         }
     },
     methods:{
-        onClickRegisterButton() {
+        async onClickRegisterButton() {
             this.$axios.post("/api/register",this.user)
             .then((response) => {
                 this.$auth.loginWith("local", {
@@ -63,7 +63,7 @@ export default {
                 })
             })
         },
-        onClickTransitionLoginButton() {
+        async onClickTransitionLoginButton() {
             this.$router.push("/auth/login");
         }
     }
