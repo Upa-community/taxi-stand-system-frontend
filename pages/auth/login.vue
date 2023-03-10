@@ -4,8 +4,9 @@
 
 <script>
 import LoginForm from "~/components/Auth/LoginForm.vue";
+
 export default {
-    layout: "LoginLayout",
+    layout: "AuthLayout",
     components: {
         LoginForm
     },

@@ -4,8 +4,9 @@
 
 <script>
 import RegisterForm from "~/components/Auth/RegisterForm.vue";
+
 export default {
-    layout: "RegisterLayout",
+    layout: "AuthLayout",
     components: {
         RegisterForm
     },
