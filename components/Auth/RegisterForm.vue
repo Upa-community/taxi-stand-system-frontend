@@ -21,7 +21,7 @@
                     <v-col cols="10">
                         <v-btn
                             block
-                            color="success"
+                            color="#00E5FF"
                             @click="onClickRegisterButton()"
                         >
                             Join
@@ -31,7 +31,7 @@
                         <v-btn
                             block
                             outlined
-                            color="success" 
+                            color="#00E5FF" 
                             @click="onClickTransitionLoginButton()"
                         >
                             Sign in
