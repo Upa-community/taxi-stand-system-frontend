@@ -17,7 +17,7 @@
                     <v-col cols="10">
                         <v-btn
                             block
-                            color="success"
+                            color="#00E5FF"
                             @click="onClickLoginButton()"
                         >
                             Login
@@ -27,7 +27,7 @@
                         <v-btn
                             block
                             outlined
-                            color="success" 
+                            color="#00E5FF" 
                             @click="onClickTransitionRegisterButton()"
                         >
                             Sign up
