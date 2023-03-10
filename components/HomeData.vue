@@ -7,10 +7,7 @@
         </div>
         <div v-if="$auth.loggedIn">
           <button @click="$auth.logout()">Logout</button>
-        </div> 
-        <v-byn @click="a()">
-          aaa
-        </v-byn>        
+        </div>      
       </v-card>
     </div>
 </template>
