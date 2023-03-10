@@ -1,5 +1,5 @@
 <template>
-    <v-app dark>
+    <v-app id="app">
         <v-navigation-drawer
             v-model="drawer"
             :mini-variant="miniVariant"
@@ -8,7 +8,11 @@
             app
             class="navigation"
         >
-            <v-list>
+            <v-list
+                class="item-list"
+                dense
+                nav
+            >
                 <v-list-item>
                     <v-list-item-action>
                         <v-icon x-large>mdi-view-dashboard-edit</v-icon> 
@@ -29,6 +33,21 @@
                     </v-list-item-content>
                 </v-list-item>
             </v-list>
+            <v-row>
+                <v-col cols="12">
+                    <div 
+                        align="center"
+                        >
+                        <v-btn
+                            height="50"
+                            width="180"
+                            @click="$auth.logout()"
+                        >
+                            Logout
+                        </v-btn>  
+                    </div>                    
+                </v-col>
+            </v-row>
         </v-navigation-drawer>
         <v-app-bar :clipped-left="clipped" fixed app>
             <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
@@ -62,9 +81,6 @@
                 </v-list-item>
             </v-list>
         </v-navigation-drawer>
-        <v-footer :absolute="!fixed" app>
-            <span>&copy; {{ new Date().getFullYear() }}</span>
-        </v-footer>
     </v-app>
 </template>
 
@@ -89,5 +105,10 @@ export default {
 <style scoped>
 .navigation {
   background-color: #00E5FF;
+}
+
+.item-list {
+  height: 90%;
+  overflow-y: auto;
 }
 </style>
