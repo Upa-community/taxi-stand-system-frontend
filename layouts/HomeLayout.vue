@@ -22,7 +22,7 @@
                     </v-list-item-content>                    
                 </v-list-item>
                 <v-list-item
-                    v-for="(spots, i) in $store.state.homeData.homeData"
+                    v-for="(spots, i) in $store.state.homeData.homeData.spots_data"
                     :key="i"
                 >
                     <v-list-item-action>

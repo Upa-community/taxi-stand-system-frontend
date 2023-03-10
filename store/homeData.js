@@ -5,7 +5,7 @@ export const state = () => ({
 })
 
 export const getters = {
-    isStatus: state => state.homeData
+    getHomeData: state => state.homeData
 }
 
 export const mutations = {

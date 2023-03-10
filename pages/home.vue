@@ -1,16 +1,16 @@
 <template>
-    <HomeData class="mx-auto" />
+    <MonthChart class="mx-auto" />
 </template>
 
 <script>
-import HomeData from "~/components/Home/HomeData.vue";
+import MonthChart from "~/components/Dashboard/MonthChart.vue";
 
 export default {
     name: "IndexPage",
     layout: "HomeLayout",
     middleware: "auth",
     components: {
-        HomeData
+        MonthChart
     }
 }
 </script>
