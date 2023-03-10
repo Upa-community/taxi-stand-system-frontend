@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import HomeData from "~/components/HomeData.vue";
+import HomeData from "~/components/Home/HomeData.vue";
 
 export default {
     name: "IndexPage",
