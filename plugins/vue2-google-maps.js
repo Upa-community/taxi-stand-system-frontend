@@ -8,6 +8,4 @@ export default function ({ $config }) {
             libraries: 'places',
         },
     });
-
-    console.log($config.googleMapsKEY);
 }
