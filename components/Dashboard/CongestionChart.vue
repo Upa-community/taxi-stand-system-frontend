@@ -1,14 +1,21 @@
 <template>
     <v-card
         class="mx-auto"
+        max-height="420"
     > 
         <v-card-item>
             <v-card-title class="headline">Congestion chart</v-card-title>
-            <div class="size">
-                <v-progress-circular :size="120" :width="20" :value="88" :color="'rgba(255, 0, 0, 100)'">
+            <div class="d-flex justify-center size">
+                <v-progress-circular
+                    :size="120"
+                    :width="10"
+                    :value="88"
+                    :color="'rgba(255, 0, 0, 60)'"
+                    :styles="chartStyles"
+                >
                     88%
-                </v-progress-circular>  
-            </div>               
+                </v-progress-circular>                
+            </div>
         </v-card-item>
     </v-card>            
 </template>
