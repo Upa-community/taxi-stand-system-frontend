@@ -18,7 +18,7 @@
                         <v-icon x-large>mdi-view-dashboard-edit</v-icon> 
                     </v-list-item-action>
                     <v-list-item-content>
-                        <v-list-item-title>Dashboard</v-list-item-title>
+                        <v-list-item-title class="text-h6">Dashboard</v-list-item-title>
                     </v-list-item-content>                    
                 </v-list-item>
                     <template
@@ -125,7 +125,7 @@ export default {
             miniVariant: false,
             right: true,
             rightDrawer: false,
-            title: 'Taxi-stand-system',
+            title: 'Admin system',
         }
     },
     computed: {
