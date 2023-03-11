@@ -1,6 +1,6 @@
 <template>
     <v-container>
-        <v-card>
+        <v-card style="background-color: #262626;">
             <v-col cols="12">
                 <h2>Register</h2>
                 <v-form @submit.prevent="registerUser">

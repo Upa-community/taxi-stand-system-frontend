@@ -2,10 +2,11 @@
     <v-card
         class="mx-auto"
         max-height="420"
+        style="background-color: #262626;"
     > 
         <v-card-item>
             <v-card-title class="headline">Day chart</v-card-title>
-            <div class="size">
+            <div style="height: 350px;">
                 <DayChartData :styles="chartStyles" /> 
             </div>               
         </v-card-item>
@@ -34,9 +35,3 @@ export default {
     }
 }
 </script>
-
-<style scoped>
-.size{
-    height: 350px;
-}
-</style>

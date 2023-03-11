@@ -2,10 +2,14 @@
     <v-card
         class="mx-auto overflow-auto"
         max-height="420"
+        style="background-color: #262626;"
     > 
         <v-card-item>
             <v-card-title class="headline">Congestion chart</v-card-title>
-            <div class="justify-center size">
+            <div
+                class="justify-center"
+                style="height: 350px;"
+            >
                 <v-col
                     cols="12"
                     class="d-flex justify-center"
@@ -44,9 +48,3 @@ export default {
     }
 }
 </script>
-
-<style scoped>
-.size{
-    height: 350px;
-}
-</style>
