@@ -102,7 +102,7 @@ export default {
 
 <style scoped>
 .navigation {
-  background-color: #00E5FF;
+  background-color: #00e6d3;
 }
 
 .item-list {
