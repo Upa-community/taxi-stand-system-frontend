@@ -1,6 +1,6 @@
 <template>
     <v-card
-        class="mx-auto overflow-auto"
+        class="mx-auto box"
         max-height="420"
         style="background-color: #262626;"
     > 
@@ -48,3 +48,15 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+.box {
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.box::-webkit-scrollbar {
+    display:none;
+}
+</style>
