@@ -146,13 +146,13 @@ export default {
                         {
                             icon: "mdi-car-multiple",
                             title: "詳細",
-                            to: "/detail",
+                            to: String(spotsData[i].id) + "/detail",
                             exact: true
                         },
                         {
                             icon: "mdi-cogs",
                             title: "設定",
-                            to: "/settings",
+                            to: String(spotsData[i].id) + "/settings",
                             exact: true
                         }
                     ]
