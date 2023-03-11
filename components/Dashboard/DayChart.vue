@@ -36,6 +36,6 @@ export default {
 
 <style scoped>
 .size{
-    height: 320px;
+    height: 350px;
 }
 </style>
