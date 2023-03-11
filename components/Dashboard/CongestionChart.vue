@@ -21,12 +21,7 @@
 </template>
   
 <script>
-import CongestionChartData from '~/components/Dashboard/CongestionChartData.vue'
-  
 export default {
-    components: {
-        CongestionChartData
-    },
     data() {
         return{
             height: 100

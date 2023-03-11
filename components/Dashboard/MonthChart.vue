@@ -1,5 +1,8 @@
 <template>
-    <v-card class="mx-auto"> 
+    <v-card
+        class="mx-auto"
+        max-height="420"
+    > 
         <v-card-item>
             <v-card-title class="headline">Month chart</v-card-title>
             <div class="size">
