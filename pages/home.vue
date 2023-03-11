@@ -1,12 +1,18 @@
 <template>
     <v-container>
         <v-row>
-            <v-col col="12">
+            <v-col :cols="12">
                 <MonthChart class="mx-auto" />
             </v-col>      
         </v-row>    
         <v-row>
-            <v-col col="12">
+            <v-col :cols="2">
+                <CongestionChart class="mx-auto" />
+            </v-col> 
+            <v-col :cols="2">
+                <DayChart class="mx-auto" />
+            </v-col> 
+            <v-col :cols="8">
                 <DayChart class="mx-auto" />
             </v-col>  
         </v-row>    
@@ -15,6 +21,7 @@
 
 <script>
 import MonthChart from "~/components/Dashboard/MonthChart.vue";
+import CongestionChart from "~/components/Dashboard/CongestionChart.vue";
 import DayChart from "~/components/Dashboard/DayChart.vue";
 
 export default {
@@ -23,6 +30,7 @@ export default {
     middleware: "auth",
     components: {
         MonthChart,
+        CongestionChart,
         DayChart
     }
 }
