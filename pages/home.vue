@@ -9,10 +9,10 @@
             <v-col :cols="2">
                 <CongestionChart class="mx-auto" />
             </v-col> 
-            <v-col :cols="2">
+            <v-col :cols="4">
                 <DayChart class="mx-auto" />
             </v-col> 
-            <v-col :cols="8">
+            <v-col :cols="6">
                 <DayChart class="mx-auto" />
             </v-col>  
         </v-row>    

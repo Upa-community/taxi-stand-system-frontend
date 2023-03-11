@@ -1,20 +1,27 @@
 <template>
     <v-card
-        class="mx-auto"
+        class="mx-auto overflow-auto"
         max-height="420"
     > 
         <v-card-item>
             <v-card-title class="headline">Congestion chart</v-card-title>
-            <div class="d-flex justify-center size">
-                <v-progress-circular
-                    :size="120"
-                    :width="10"
-                    :value="88"
-                    :color="'rgba(255, 0, 0, 60)'"
-                    :styles="chartStyles"
+            <div class="justify-center size">
+                <v-col
+                    cols="12"
+                    class="d-flex justify-center"
+                    v-for="(spots, i) in $store.state.homeData.homeData.spots_data"
+                    :key="i"
                 >
-                    88%
-                </v-progress-circular>                
+                    <v-progress-circular
+                        :size="180"
+                        :width="10"
+                        :value="100 * spots.spots_count / spots.spots_max"
+                        :color="spots.border_color"
+                        :styles="chartStyles"
+                    >
+                        <h2>{{ 100 * spots.spots_count / spots.spots_max }}%</h2>
+                    </v-progress-circular>
+                </v-col>
             </div>
         </v-card-item>
     </v-card>            
