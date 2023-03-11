@@ -180,14 +180,6 @@ export default {
                 ]
             }
         }
-    },
-    computed:{
-        chartStyles() {
-            return{
-                height: `${this.height}%`,
-                position:'relative'
-            }
-        }
     }
 }
 </script>
