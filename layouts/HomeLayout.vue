@@ -9,7 +9,7 @@
             class="navigation"
         >
             <v-list
-                class="item-list"
+                class="item-list box"
                 dense
                 nav
             >
@@ -21,17 +21,48 @@
                         <v-list-item-title>Dashboard</v-list-item-title>
                     </v-list-item-content>                    
                 </v-list-item>
-                <v-list-item
-                    v-for="(spots, i) in $store.state.homeData.homeData.spots_data"
-                    :key="i"
-                >
-                    <v-list-item-action>
-                        <v-icon>mdi-pin-outline</v-icon> 
-                    </v-list-item-action>
-                    <v-list-item-content>
-                        <v-list-item-title>{{ spots.spots_name }}</v-list-item-title>
-                    </v-list-item-content>
-                </v-list-item>
+                    <template
+                        v-for="(navigation, i) in sideNavigationList"
+                    >
+                    <v-list-item
+                        v-if="typeof navigation.items !== 'object'"
+                        :key="i"
+                        :to="navigation.to"
+                        :exact="navigation.exact"
+                    >
+                        <v-list-item-action>
+                            <v-icon>{{ navigation.icon }}</v-icon>
+                        </v-list-item-action>
+                        <v-list-item-content>
+                            <v-list-item-title class="text-subtitle-1" v-text="navigation.title" />
+                        </v-list-item-content>
+                    </v-list-item>
+                        <v-list-group
+                            v-else
+                            :key="i"
+                            :prepend-icon="navigation.icon"
+                        >
+                            <template v-slot:activator>
+                                <v-list-item-content>
+                                <v-list-item-title class="text-subtitle-1" v-text="navigation.title" />
+                                </v-list-item-content>
+                            </template>
+                            <v-list-item
+                                v-for="(subNavigation, j) in navigation.items"
+                                :key="j"
+                                :to="subNavigation.to"
+                                :exact="subNavigation.exact"
+                            >
+                                <v-list-item-icon>
+                                    <v-icon>{{ subNavigation.icon }}</v-icon>
+                                </v-list-item-icon>
+                                <v-list-item-content>
+                                    <v-list-item-title v-text="subNavigation.title" />
+                                </v-list-item-content>
+                            </v-list-item>
+                        </v-list-group>
+                    </template>                    
+
             </v-list>
             <v-row>
                 <v-col cols="12">
@@ -97,6 +128,42 @@ export default {
             title: 'Taxi-stand-system',
         }
     },
+    computed: {
+        sideNavigationList() {
+            var navigationList = [];
+            var spots = this.$store.state.homeData;
+            var spotsData = spots.homeData.spots_data;
+            
+            if (typeof spotsData == 'undefined') {
+                spotsData = [];
+            }
+
+            for (let i = 0; i < spotsData.length; i++) {
+                var data = {
+                    icon: "mdi-pin-outline",
+                    title: spotsData[i].spots_name,
+                    items: [
+                        {
+                            icon: "mdi-car-multiple",
+                            title: "詳細",
+                            to: "/detail",
+                            exact: true
+                        },
+                        {
+                            icon: "mdi-cogs",
+                            title: "設定",
+                            to: "/settings",
+                            exact: true
+                        }
+                    ]
+                }
+
+                navigationList.push(data);
+            }
+    
+            return navigationList;
+        }
+    }
 }
 </script>
 
@@ -108,5 +175,15 @@ export default {
 .item-list {
   height: 90%;
   overflow-y: auto;
+}
+
+.box {
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.box::-webkit-scrollbar {
+    display:none;
 }
 </style>
