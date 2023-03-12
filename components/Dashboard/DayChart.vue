@@ -5,7 +5,7 @@
         style="background: linear-gradient(#14F3FF, #6E00B2);"
     > 
         <v-card-item>
-            <v-card-title class="headline">Day chart</v-card-title>
+            <v-card-title class="headline">Day</v-card-title>
             <div style="height: 350px;">
                 <DayChartData :styles="chartStyles" /> 
             </div>               
