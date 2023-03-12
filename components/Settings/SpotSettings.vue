@@ -5,7 +5,12 @@
         style="background: linear-gradient(#14F3FF, #6E00B2);"
     > 
         <v-card-item>
-            <v-card-title class="headline">Spot settings</v-card-title>
+            <v-card-title class="headline">Spot Settings
+                <v-btn icon @click.stop="fixed = !fixed">
+                    <v-icon>mdi-minus</v-icon>
+                </v-btn>
+                {{ $store.state.settingData.settingData }}
+            </v-card-title>
             <v-col cols="12">
                 <v-form>
                     <v-text-field
@@ -26,13 +31,23 @@
                     ></v-text-field>
                 </v-form>
                 <v-row>
-                    <v-col cols="4">
+                    <v-col cols="10">
                         <v-btn
                             block
                             color="#00E5FF"
-                            @click="onClickRegisterButton()"
+                            @click="onClickUpdateButton()"
                         >
-                            Register
+                            Update
+                        </v-btn>
+                    </v-col>
+                    <v-col cols="2">
+                        <v-btn
+                            block
+                            outlined
+                            color="#ff1493"
+                            @click="onClickDeleteButton()"
+                        >
+                            Delete
                         </v-btn>
                     </v-col>
                 </v-row>
@@ -45,6 +60,7 @@
 export default {
     data() {
         return{
+            name: "",
             spot: {
                 spots_name: "",
                 spots_address: "",
@@ -54,8 +70,15 @@ export default {
         }
     },
     methods: {
-        onClickRegisterButton() {
-            this.$axios.post("/api/spots_register/" + this.$auth.user.id, this.spot)
+        onClickUpdateButton() {
+            this.$axios.post("/api/spots_update/" + this.$route.params.id, this.spot)
+            .then((response) => {
+                this.onLoadhomeData();
+                this.$router.push("/home");
+            })
+        },
+        onClickDeleteButton() {
+            this.$axios.get("/api/spots_delete/" + this.$route.params.id)
             .then((response) => {
                 this.onLoadhomeData();
                 this.$router.push("/home");

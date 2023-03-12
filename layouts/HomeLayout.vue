@@ -45,6 +45,7 @@
                             :key="j"
                             :to="subNavigation.to"
                             :exact="subNavigation.exact"
+                            @click="onLoadSettingData(navigation.title)"
                         >
                             <v-list-item-icon>
                                 <v-icon>{{ subNavigation.icon }}</v-icon>
@@ -193,6 +194,11 @@ export default {
         onClickDashboardButton() {
             this.onLoadhomeData();
             this.$router.push("/home");
+        },
+        onLoadSettingData(spotsName) {
+            this.$store.dispatch("settingData/onLoadSettingData", {
+                spotsName: spotsName
+            });
         },
         async onLoadhomeData() {
             this.$store.dispatch("homeData/onLoadhomeData", {
