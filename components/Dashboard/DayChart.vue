@@ -2,7 +2,7 @@
     <v-card
         class="mx-auto"
         max-height="420"
-        style="background-color: #262626;"
+        style="background: linear-gradient(#14F3FF, #6E00B2);"
     > 
         <v-card-item>
             <v-card-title class="headline">Day chart</v-card-title>

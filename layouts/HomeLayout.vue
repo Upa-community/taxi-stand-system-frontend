@@ -1,5 +1,8 @@
 <template>
-    <v-app id="app">
+    <v-app 
+        id="app"
+        style="background: linear-gradient(to right, #fc00ff, #00dbde);"
+        >
         <v-navigation-drawer
             v-model="drawer"
             :mini-variant="miniVariant"
@@ -169,12 +172,12 @@ export default {
 
 <style scoped>
 .navigation {
-  background-color: #00e6e6;
+    background: linear-gradient(#00d8db, #8200ce);
 }
 
 .item-list {
-  height: 90%;
-  overflow-y: auto;
+    height: 90%;
+    overflow-y: auto;
 }
 
 .box {
