@@ -1,5 +1,5 @@
 <template>
-    <v-app dark>
+    <v-app style="background: linear-gradient(to right, #fc00ff, #00dbde);">
         <v-main>
             <v-container>
                 <Nuxt />

@@ -1,6 +1,6 @@
 <template>
     <v-container>
-        <v-card style="background-color: #262626;">
+        <v-card style="background: linear-gradient(#14F3FF, #6E00B2);">
             <v-col cols="12">
                 <h2>Login</h2>
                 <v-form @submit.prevent="loginUser">
