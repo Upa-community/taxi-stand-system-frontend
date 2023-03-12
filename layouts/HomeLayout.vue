@@ -123,6 +123,9 @@
             </v-btn>
             <v-toolbar-title>{{ title }}</v-toolbar-title>
             <v-spacer />
+            <v-btn icon @click="onLoadhomeData()">
+                <v-icon>mdi-reload</v-icon>
+            </v-btn>
         </v-app-bar>
         <v-main>
             <v-container>
