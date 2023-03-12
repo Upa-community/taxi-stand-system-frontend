@@ -16,7 +16,7 @@
                 dense
                 nav
             >
-                <v-list-item>
+                <v-list-item @click="onClickDashboardButton()">
                     <v-list-item-action>
                         <v-icon x-large>mdi-view-dashboard-edit</v-icon> 
                     </v-list-item-action>
@@ -199,6 +199,15 @@ export default {
     methods: {
         onClickSpotRegisterButton() {
             this.$router.push("/spotRegister");
+        },
+        onClickDashboardButton() {
+            this.onLoadhomeData();
+            this.$router.push("/home");
+        },
+        async onLoadhomeData() {
+            this.$store.dispatch("homeData/onLoadhomeData", {
+                usersId: this.$auth.user.id
+            });
         }
     }
 }
