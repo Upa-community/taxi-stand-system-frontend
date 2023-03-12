@@ -68,25 +68,47 @@
                         <v-list-item-content>
                             <v-list-item-title
                                 class="text-subtitle-1"
-                                :v-text="navigation.title"
+                                v-text="navigation.title"
                             />
                         </v-list-item-content>
                     </v-list-item>
                 </template>                    
             </v-list>
-            <v-row>
-                <v-col cols="12">
-                    <div align="center">
-                        <v-btn
-                            height="50"
-                            width="180"
-                            @click="$auth.logout()"
-                        >
-                            Logout
-                        </v-btn>  
-                    </div>                    
-                </v-col>
-            </v-row>
+            <v-list>
+                <v-list-group>
+                    <template v-slot:activator>
+                        <v-list-item-action>
+                            <v-icon x-large>mdi-account-cog-outline</v-icon> 
+                        </v-list-item-action>
+                        <v-list-item-content>
+                            <v-list-item-title
+                                class="text-subtitle-1"
+                                v-text="'Settings'"
+                            />
+                        </v-list-item-content>
+                    </template>
+                    <v-list-item @click="onClickSpotRegisterButton()">
+                        <v-list-item-icon>
+                            <v-icon>mdi-cctv</v-icon>
+                        </v-list-item-icon>
+                        <v-list-item-content>
+                            <v-list-item-title
+                                v-text="'Register'"
+                            />
+                        </v-list-item-content>
+                    </v-list-item>
+                    <v-list-item @click="$auth.logout()">
+                        <v-list-item-icon>
+                            <v-icon>mdi-logout</v-icon>
+                        </v-list-item-icon>
+                        <v-list-item-content>
+                            <v-list-item-title
+                                v-text="'Logout'"
+                            />
+                        </v-list-item-content>
+                    </v-list-item>
+                </v-list-group>
+            </v-list>
         </v-navigation-drawer>
         <v-app-bar :clipped-left="clipped" fixed app>
             <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
@@ -173,6 +195,11 @@ export default {
     
             return navigationList;
         }
+    },
+    methods: {
+        onClickSpotRegisterButton() {
+            this.$router.push("/spotRegister");
+        }
     }
 }
 </script>
@@ -183,7 +210,7 @@ export default {
 }
 
 .item-list {
-    height: 90%;
+    height: 80%;
     overflow-y: auto;
 }
 
