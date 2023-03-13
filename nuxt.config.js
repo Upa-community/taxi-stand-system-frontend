@@ -103,5 +103,13 @@ export default {
         // tokenType: 'bearer'
       }
     }
+  },
+
+  router: {
+    extendRoutes(routes) {
+      routes.push(
+        { path: '/', redirect: '/home' },
+      )
+    }
   }
 }
