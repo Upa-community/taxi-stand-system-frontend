@@ -5,11 +5,11 @@ module.exports = {
     'jest/globals': true,
     node: true,
   },
-  parserOptions: {
-    parser: '@babel/eslint-parser',
-    requireConfigFile: false,
-  },
-  extends: ['@nuxtjs', 'plugin:nuxt/recommended', 'prettier'],
+  extends: [
+    '@nuxtjs/eslint-config-typescript',
+    'plugin:nuxt/recommended',
+    'prettier',
+  ],
   plugins: ['jest'],
   // add your custom rules here
   rules: {},

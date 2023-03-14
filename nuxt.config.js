@@ -3,8 +3,8 @@ import colors from 'vuetify/es5/util/colors'
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - taxi-stand-system',
-    title: 'taxi-stand-system',
+    titleTemplate: '%s - test-project',
+    title: 'test-project',
     htmlAttrs: {
       lang: 'en',
     },
@@ -32,13 +32,10 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module',
-    // https://go.nuxtjs.dev/stylelint
-    '@nuxtjs/stylelint-module',
+    // https://go.nuxtjs.dev/typescript
+    '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
-    //'@nuxt/typescript-build',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -46,17 +43,16 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     '@nuxtjs/auth',
-    'bootstrap-vue/nuxt'
   ],
 
   publicRuntimeConfig: {
     googleMapsKEY: process.env.GOOGLE_MAPS_KEY
   },
-  
+
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: process.env.BASE_URL
+    baseURL: process.env.BASE_URL,
   },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify

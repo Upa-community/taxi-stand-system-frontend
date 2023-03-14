@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-template",
+  "name": "test-project",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -64,20 +64,5 @@
     "stylelint-config-recommended-vue": "^1.4.0",
     "stylelint-config-standard": "^28.0.0",
     "vue-jest": "^3.0.4"
-  },
-  "description": "タクシー乗り場の可視化・効率化システムのフロントエンド。",
-  "main": ".eslintrc.js",
-  "directories": {
-    "test": "test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Upa-community/taxi-stand-system-frontend.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Upa-community/taxi-stand-system-frontend/issues"
-  },
-  "homepage": "https://github.com/Upa-community/taxi-stand-system-frontend#readme"
+  }
 }
