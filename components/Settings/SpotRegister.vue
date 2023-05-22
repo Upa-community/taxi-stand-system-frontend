@@ -2,10 +2,10 @@
     <v-card
         class="mx-auto"
         max-height="500"
-        style="background: linear-gradient(#14F3FF, #6E00B2);"
+        style="background: #ffffff;"
     > 
         <v-card-item>
-            <v-card-title class="headline">Spot registration</v-card-title>
+            <v-card-title class="headline">地点登録 - 新規</v-card-title>
             <v-col cols="12">
                 <v-form>
                     <v-text-field

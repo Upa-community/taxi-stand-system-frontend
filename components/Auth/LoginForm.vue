@@ -1,17 +1,17 @@
 <template>
     <v-container>
-        <v-card style="background: linear-gradient(#14F3FF, #6E00B2);">
+        <v-card style="background: #ffffff;">
             <v-col cols="12">
-                <h2>Login</h2>
+                <h2>ログイン</h2>
                 <v-form @submit.prevent="loginUser">
                     <v-text-field
                         v-model="user.email"
-                        label="Email"
+                        label="メールアドレス"
                     ></v-text-field>
                     <v-text-field
                         v-model="user.password"
                         type="password"
-                        label="Password"
+                        label="パスワード"
                     ></v-text-field>
                 </v-form>
                 <v-row>
@@ -21,7 +21,7 @@
                             color="#00E5FF"
                             @click="onClickLoginButton()"
                         >
-                            Login
+                            ログイン
                         </v-btn>
                     </v-col>
                     <v-col cols="2">
@@ -31,7 +31,7 @@
                             color="#00E5FF" 
                             @click="onClickTransitionRegisterButton()"
                         >
-                            Sign up
+                            新規登録
                         </v-btn>                          
                     </v-col>
                 </v-row>

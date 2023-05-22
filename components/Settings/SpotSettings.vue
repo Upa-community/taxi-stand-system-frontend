@@ -2,10 +2,10 @@
     <v-card
         class="mx-auto"
         max-height="500"
-        style="background: linear-gradient(#14F3FF, #6E00B2);"
+        style="background: #ffffff;"
     > 
         <v-card-item>
-            <v-card-title class="headline">Spot Settings
+            <v-card-title class="headline">地点登録 - 更新
                 <v-btn icon @click.stop="fixed = !fixed">
                     <v-icon>mdi-minus</v-icon>
                 </v-btn>

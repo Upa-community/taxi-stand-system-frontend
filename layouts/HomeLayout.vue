@@ -1,7 +1,7 @@
 <template>
     <v-app 
         id="app"
-        style="background: linear-gradient(to right, #fc00ff, #00dbde);"
+        style="background: #e9e9e9;"
         >
         <v-navigation-drawer
             v-model="drawer"
@@ -84,7 +84,7 @@
                         <v-list-item-content>
                             <v-list-item-title
                                 class="text-subtitle-1"
-                                v-text="'Settings'"
+                                v-text="'設定'"
                             />
                         </v-list-item-content>
                     </template>
@@ -94,7 +94,7 @@
                         </v-list-item-icon>
                         <v-list-item-content>
                             <v-list-item-title
-                                v-text="'Register'"
+                                v-text="'地点登録'"
                             />
                         </v-list-item-content>
                     </v-list-item>
@@ -104,7 +104,7 @@
                         </v-list-item-icon>
                         <v-list-item-content>
                             <v-list-item-title
-                                v-text="'Logout'"
+                                v-text="'ログアウト'"
                             />
                         </v-list-item-content>
                     </v-list-item>
@@ -211,7 +211,7 @@ export default {
 
 <style scoped>
 .navigation {
-    background: linear-gradient(#00d8db, #8200ce);
+    background: #2ed5eb;;
 }
 
 .item-list {

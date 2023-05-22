@@ -2,10 +2,10 @@
     <v-card
         class="mx-auto"
         max-height="420"
-        style="background: linear-gradient(#14F3FF, #6E00B2);"
+        style="background: #ffffff;"
     > 
         <v-card-item>
-            <v-card-title class="headline">Day</v-card-title>
+            <v-card-title class="headline">利用台数推移 - 1日</v-card-title>
             <div style="height: 350px;">
                 <DayChartData :styles="chartStyles" /> 
             </div>               

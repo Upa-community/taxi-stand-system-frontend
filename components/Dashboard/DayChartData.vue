@@ -12,27 +12,6 @@ export default {
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
-                legend: {
-                    labels: {
-                        fontColor: "rgba(255, 255, 255, 10)"
-                    }
-                },
-                scales: {
-                    xAxes: [
-                        {
-                            ticks: {
-                                fontColor: "rgba(255, 255, 255, 10)"
-                            }
-                        }
-                    ],
-                    yAxes: [
-                        {
-                            ticks: {
-                                fontColor: "rgba(255, 255, 255, 10)"
-                            }
-                        }
-                    ]
-                }
             }
         }
     },
