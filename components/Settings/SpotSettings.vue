@@ -37,7 +37,7 @@
                             color="#00E5FF"
                             @click="onClickUpdateButton()"
                         >
-                            Update
+                            更新
                         </v-btn>
                     </v-col>
                     <v-col cols="2">
@@ -47,7 +47,7 @@
                             color="#ff1493"
                             @click="onClickDeleteButton()"
                         >
-                            Delete
+                            削除
                         </v-btn>
                     </v-col>
                 </v-row>

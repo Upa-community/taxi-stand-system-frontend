@@ -32,7 +32,7 @@
                             color="#00E5FF"
                             @click="onClickRegisterButton()"
                         >
-                            Register
+                            登録
                         </v-btn>
                     </v-col>
                 </v-row>
