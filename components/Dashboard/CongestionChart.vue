@@ -23,6 +23,7 @@
                         :color="spots.border_color"
                         :styles="chartStyles"
                     >
+                        <h2>{{ spots.spots_name }}</h2>
                         <h2>{{ 100 * spots.spots_count / spots.spots_max }}%</h2>
                     </v-progress-circular>
                 </v-col>
