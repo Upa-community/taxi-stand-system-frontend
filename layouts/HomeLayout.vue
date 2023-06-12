@@ -22,8 +22,23 @@
                     </v-list-item-action>
                     <v-list-item-content>
                         <v-list-item-title class="text-h6">Dashboard</v-list-item-title>
-                    </v-list-item-content>                    
+                    </v-list-item-content>         
                 </v-list-item>
+                <v-list-item>
+                    <v-row>
+                        <v-col cols="8">
+                            <input placeholder="駐輪場"
+                                style="background: #ffffff;
+                                width: 145px;
+                                height: 36px;
+                                border-radius: 5px 5px 5px 5px;" 
+                            />
+                        </v-col>
+                        <v-col cols="2">
+                            <v-btn>検索</v-btn>
+                        </v-col>                        
+                    </v-row>
+                </v-list-item>  
                 <template
                     v-for="(navigation, i) in sideNavigationList"
                 >
