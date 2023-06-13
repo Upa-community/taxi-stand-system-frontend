@@ -15,14 +15,14 @@ export const mutations = {
 }
 
 export const actions = {
-    async onLoadHomeData({ commit, state }, { usersId }) {
+    async onLoadHomeData({ commit }, { usersId }) {
         this.$axios.get("/api/home_data/" + usersId)
         .then((response) => {
             console.log(response.data)
             commit('setHomeData', response.data);
         })   
     },
-    onResetHomeData({ commit, state }) {
+    onResetHomeData({ commit }) {
         commit('setHomeData', {"spots_data": []});
     }
 }
