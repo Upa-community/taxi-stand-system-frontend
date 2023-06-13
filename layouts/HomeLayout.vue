@@ -27,7 +27,10 @@
                 <v-list-item>
                     <v-row>
                         <v-col cols="8">
-                            <input placeholder="駐輪場"
+                            <input 
+                                placeholder="駐輪場"
+                                type="text"
+                                v-model="searchBox"
                                 style="background: #ffffff;
                                 width: 145px;
                                 height: 36px;
@@ -35,7 +38,7 @@
                             />
                         </v-col>
                         <v-col cols="2">
-                            <v-btn>検索</v-btn>
+                            <v-btn @click="onClickSearchButton()">検索</v-btn>
                         </v-col>                        
                     </v-row>
                 </v-list-item>  
@@ -139,7 +142,7 @@
             </v-btn>
             <v-toolbar-title>{{ title }}</v-toolbar-title>
             <v-spacer />
-            <v-btn icon @click="onLoadhomeData()">
+            <v-btn icon @click="onClickDashboardButton()">
                 <v-icon>mdi-reload</v-icon>
             </v-btn>
         </v-app-bar>
@@ -164,6 +167,7 @@ export default {
             right: true,
             rightDrawer: false,
             title: 'Admin system',
+            searchBox: ""
         }
     },
     computed: {
@@ -222,6 +226,12 @@ export default {
         async onLoadHomeData() {
             this.$store.dispatch("homeData/onLoadHomeData", {
                 usersId: this.$auth.user.id
+            });
+        },
+        async onClickSearchButton() {
+            this.$store.dispatch("homeData/onSearchData", {
+                usersId: this.$auth.user.id,
+                searchWord: this.searchBox
             });
         }
     }
