@@ -85,7 +85,7 @@ export default {
             })
         },
         onLoadhomeData() {
-            this.$store.dispatch("homeData/onLoadhomeData", {
+            this.$store.dispatch("homeData/onLoadHomeData", {
                 usersId: this.$auth.user.id
             });
         }

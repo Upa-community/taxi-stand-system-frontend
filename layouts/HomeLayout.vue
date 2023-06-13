@@ -207,7 +207,8 @@ export default {
             this.$router.push("/spotRegister");
         },
         onClickDashboardButton() {
-            this.onLoadhomeData();
+            this.onResetHomeData();
+            this.onLoadHomeData();
             this.$router.push("/home");
         },
         onLoadSettingData(spotsName) {
@@ -215,8 +216,11 @@ export default {
                 spotsName: spotsName
             });
         },
-        async onLoadhomeData() {
-            this.$store.dispatch("homeData/onLoadhomeData", {
+        onResetHomeData() {
+            this.$store.dispatch("homeData/onResetHomeData")
+        },
+        async onLoadHomeData() {
+            this.$store.dispatch("homeData/onLoadHomeData", {
                 usersId: this.$auth.user.id
             });
         }
