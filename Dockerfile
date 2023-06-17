@@ -1,4 +1,4 @@
-FROM node:18.16.0-alpine as builder
+FROM node:18.16.0 as builder
 WORKDIR /app
 
 ADD . ./
@@ -6,7 +6,7 @@ ADD . ./
 RUN yarn install
 RUN yarn build
 
-FROM node:18.16.0-alpine
+FROM node:18.16.0
 WORKDIR /app
 
 ENV HOST=0.0.0.0
