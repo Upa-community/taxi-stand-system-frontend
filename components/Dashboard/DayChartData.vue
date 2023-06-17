@@ -5,6 +5,7 @@ export default {
     extends: Line,
     data(){
         return {
+            viewJudge: true,
             chartdata: {
                 labels: [],
                 datasets: []
@@ -35,8 +36,13 @@ export default {
                     fill: false
                 }
                 this.chartdata.datasets.push(dataset);
-                this.renderChart(this.chartdata, this.options);
-            }  
+
+                if (this.viewJudge) {
+                    this.renderChart(this.chartdata, this.options);
+                }
+            }
+
+            this.viewJudge = false;
         }
     }
 }
