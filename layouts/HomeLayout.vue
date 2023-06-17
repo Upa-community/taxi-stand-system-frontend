@@ -2,7 +2,7 @@
     <v-app 
         id="app"
         style="background: #e9e9e9;"
-        >
+    >
         <v-navigation-drawer
             v-model="drawer"
             :mini-variant="miniVariant"
@@ -22,7 +22,7 @@
                     </v-list-item-action>
                     <v-list-item-content>
                         <v-list-item-title class="text-h6">Dashboard</v-list-item-title>
-                    </v-list-item-content>         
+                    </v-list-item-content>
                 </v-list-item>
                 <v-list-item>
                     <v-row>
@@ -94,18 +94,7 @@
                 </template>                    
             </v-list>
             <v-list>
-                <v-list-group>
-                    <template v-slot:activator>
-                        <v-list-item-action>
-                            <v-icon x-large>mdi-account-cog-outline</v-icon> 
-                        </v-list-item-action>
-                        <v-list-item-content>
-                            <v-list-item-title
-                                class="text-subtitle-1"
-                                v-text="'設定'"
-                            />
-                        </v-list-item-content>
-                    </template>
+            <template> 
                     <v-list-item @click="onClickSpotRegisterButton()">
                         <v-list-item-icon>
                             <v-icon>mdi-cctv</v-icon>
@@ -126,7 +115,7 @@
                             />
                         </v-list-item-content>
                     </v-list-item>
-                </v-list-group>
+                </template> 
             </v-list>
         </v-navigation-drawer>
         <v-app-bar :clipped-left="clipped" fixed app>
