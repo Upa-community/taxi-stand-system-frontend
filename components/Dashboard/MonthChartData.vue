@@ -5,7 +5,6 @@ export default {
     extends: Line,
     data(){
         return {
-            viewJudge: true,
             chartdata: {
                 labels: [],
                 datasets: []
@@ -23,6 +22,7 @@ export default {
     },
     watch: {
         getHomeData(values) {
+            this.chartdata = {labels: [], datasets: []};
             this.chartdata.labels = values.month_labels_data;
             var spots = values.spots_data;
 
@@ -36,13 +36,8 @@ export default {
                     fill: false
                 }
                 this.chartdata.datasets.push(dataset);
-
-                if (this.viewJudge) {
-                    this.renderChart(this.chartdata, this.options);
-                }
+                this.renderChart(this.chartdata, this.options);
             }
-
-            this.viewJudge = false;
         }
     }
 }
