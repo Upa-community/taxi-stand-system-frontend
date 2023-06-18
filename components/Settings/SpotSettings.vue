@@ -71,14 +71,14 @@ export default {
     },
     methods: {
         onClickUpdateButton() {
-            this.$axios.post("/api/spots_update/" + this.$route.params.id, this.spot)
+            this.$axios.put("/api/spots_update/" + this.$route.params.id, this.spot)
             .then((response) => {
                 this.onLoadhomeData();
                 this.$router.push("/home");
             })
         },
         onClickDeleteButton() {
-            this.$axios.get("/api/spots_delete/" + this.$route.params.id)
+            this.$axios.delete("/api/spots_delete/" + this.$route.params.id)
             .then((response) => {
                 this.onLoadhomeData();
                 this.$router.push("/home");
