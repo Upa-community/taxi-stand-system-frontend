@@ -4,7 +4,6 @@ WORKDIR /app
 ADD . ./
 
 RUN yarn install
-RUN yarn build
 
 FROM node:18.16.0
 WORKDIR /app
