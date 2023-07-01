@@ -14,6 +14,5 @@ ADD package.json ./
 ADD nuxt.config.js ./
 
 COPY --from=builder ./app/node_modules ./node_modules/
-COPY --from=builder ./app/.nuxt ./.nuxt/
 
 EXPOSE 3000
