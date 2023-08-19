@@ -5,7 +5,7 @@
         style="background: #ffffff;"
     > 
         <v-card-item>
-            <v-card-title class="headline">利用台数推移 - １ヶ月</v-card-title>
+            <v-card-title class="headline">利用者数推移 - １ヶ月</v-card-title>
             <div style="height: 350px;">
                 <MonthChartData :styles="chartStyles" />                 
             </div>
