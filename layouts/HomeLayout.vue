@@ -28,7 +28,7 @@
                     <v-row>
                         <v-col cols="8">
                             <input 
-                                placeholder="駐輪場"
+                                placeholder="地点"
                                 type="text"
                                 v-model="searchBox"
                                 style="background: #ffffff;
